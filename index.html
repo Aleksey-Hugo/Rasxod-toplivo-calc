@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Расчет расхода топлива - онлайн калькулятор</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Калькулятор расхода топлива - простой и понятный онлайн калькулятор, плюс немного теории.">
+<meta name="keywords" content="расход топлива, онлайн калькулятор">
+<link rel="canonical" href="https://poschitat.online/rashod-topliva">
+<link rel="shortcut icon" href="https://poschitat.online/favicon.ico" type="image/x-icon">
+<link href="./index_files/stil.css" rel="stylesheet" media="all">
+<script async="" src="./index_files/tag.js"></script><script type="text/javascript" src="./index_files/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./index_files/nan.js"></script>
+
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ym(51739187, "init", {
+id:51739187,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true,
+webvisor:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/51739187" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<script async="" src="./index_files/f.txt"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-0048456150447574",
+enable_page_level_ads: true
+});
+</script>
+</head>
+<body>
+<header class="border-color">
+<div class="header">
+<div class="header__logo">
+<div class="header__img">
+<span class="header__text text-color-1"><a href="">Расщёт топлива</a></span>
+</div>
+</div>
+</div>
+</header>
+<div class="main">
+
+
+<h2>Рассчитать общий расход топлива</h2>
+<div class="pole calc f190">Средний расход топлива: <nobr><input id="p_a" class="imput_1 w_100" value="" placeholder="0" name="a" onkeyup="this.value = this.value.replace (&#39;,&#39;, &#39;.&#39;).replace (/[^0-9.-]/gi, &#39;&#39;); poschitat()"> <sup>л</sup>/<sub>100км </sub></nobr><br>Длина маршрута: <nobr><input id="p_b" class="imput_1 w_100" value="" placeholder="0" name="b" onkeyup="this.value = this.value.replace (&#39;,&#39;, &#39;.&#39;).replace (/[^0-9.-]/gi, &#39;&#39;); poschitat()"> км</nobr> <br>Цена за литр топлива: <nobr><input id="p_c" class="imput_1 w_100" value="" placeholder="0" name="c" onkeyup="this.value = this.value.replace (&#39;,&#39;, &#39;.&#39;).replace (/[^0-9.-]/gi, &#39;&#39;); poschitat()"> руб.</nobr> <br><span style="font-size: 70%; position: relative; top: 0px;">Объём топливного бака: <nobr><input id="p_l" class="imput_1 w_100" value="" placeholder="0" name="l" onkeyup="this.value = this.value.replace (&#39;,&#39;, &#39;.&#39;).replace (/[^0-9.-]/gi, &#39;&#39;); poschitat()"> л</nobr></span> <br><br>Расход топлива: <div id="rez_r1" class="otvet">12</div> литров <br>Стоимость топлива: <div id="rez_r2" class="otvet">144</div> рублей <br><span style="font-size: 70%; position: relative; top: 0px;">Количество заправок на АЗС: <div id="rez_r3" class="otvet">1</div>  </span>
+
+
+<h2>Рассчитать средний расход топлива на 100 км</h2>
+<div class="pole calc f190">Израсходовано топлива: <input id="p_a2" class="imput_1 w_100" value="" placeholder="0" name="a2" onkeyup="this.value = this.value.replace (&#39;,&#39;, &#39;.&#39;).replace (/[^0-9.-]/gi, &#39;&#39;); poschitat()"> л <br>Длина маршрута: <input id="p_b2" class="imput_1 w_100" value="" placeholder="0" name="b2" onkeyup="this.value = this.value.replace (&#39;,&#39;, &#39;.&#39;).replace (/[^0-9.-]/gi, &#39;&#39;); poschitat()"> км <br><br>Средний расход топлива: <div id="rez_r12" class="otvet">0</div> <sup>л</sup>/<sub>100км </sub>
+
+
+<script type="text/javascript">function poschitat() {var a = +$("#p_a").val();var b = +$("#p_b").val();var c = +$("#p_c").val();var l = +$("#p_l").val();$("#rez_r1").html(nan(Math.round(((b*a)/100)*100)/100)); $("#rez_r2").html(nan(Math.round((((b*a)/100)*c)*100)/100)); $("#rez_r3").html(nan(Math.ceil(((b*a)/100)/l))); var a2 = +$("#p_a2").val();var b2 = +$("#p_b2").val();$("#rez_r12").html(nan(Math.round(((a2*100)/b2)*100)/100)); } $('#schet').on('click', function(){ poschitat()}); </script>
+ <script>
+ function getSearchParams(k){
+ var p={};
+ location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){p[k]=v})
+ return k?p[k]:p;
+}
+
+ if (getSearchParams("pt") == 1){
+ var rty = getSearchParams();
+ $.each(rty, function( key, value ) {
+ $('#'+key).val(value);});
+ poschitat();
+}
+
+if (typeof poschitat_now !== 'undefined') {
+ if (poschitat_now == 1){
+ poschitat();
+}}
+</script>
+
+<div>
+
+<script async="" src="./index_files/f.txt"></script>
+<!-- pos_bottom -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-0048456150447574" data-ad-slot="4420967290" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+
+</div><div class="mylinkkn" style=""><div class="mylink_kn"><div class="mylink_kn_in"><img src="./index_files/links.png" alt="Сгенерировать ссылку на расчёт" title="Сгенерировать ссылку на расчёт"></div></div></div> <div class="mylinkpole"></div>  <script> $(".imput_1").focus(function(){ if(!$("div").is(".mylink_kn")){ $(".mylinkkn").html('<div class="mylink_kn"><div class="mylink_kn_in"><img src="https://poschitat.online/img/links.png" alt="Сгенерировать ссылку на расчёт" title="Сгенерировать ссылку на расчёт"></div></div>'); $(".mylinkkn").hide(); $(".mylinkkn").show("slow") ; } }); $(document).on("click", ".mylink_kn", function(){ if($("div").is(".mylink_pole")){ $(".mylink_pole").detach(); } else{ cod62 = $.ajax({ url: "dop_files/gencod62.php", async: false }).responseText; var urlcod62 = "https://poschitat.online/l/"+cod62; dd = 0; $(".mylinkpole").html("<div class='mylink_pole'> <input class='mylink__pole' value='"+urlcod62+"'</readonly> </div>"); $(".mylinkpole").hide(); $(".mylinkpole").show("slow") ; } }); $(document).on("click", ".mylink__pole", function(){ $(this).select(); if (dd!=1){ var url = $('link[rel=canonical]').attr('href') + "?pt=1";  $('.main').find ('input, select').each(function() { if($(this).val() != "")	{ url = url + "&"+this.id +"="+ $(this).val(); } }); $.ajax({ type: "POST", url: "dop_files/link2bd.php", data: { cod62 : cod62, link: url}, }); dd = 1; } }); </script><div class="yoom"></div>
+<script>
+const pageWidth = document.documentElement.scrollWidth;
+if (pageWidth >= 1800){
+$(".yoom").load("yoom/yoom.php");
+}
+</script>
+
+
+</body></html>
